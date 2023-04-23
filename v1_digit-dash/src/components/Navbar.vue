@@ -24,7 +24,7 @@
           How to play
         </RouterLink>
 
-        <RouterLink to="/highscore" class="navbar-item button is-info">
+        <RouterLink to="/highscore" class="navbar-item button is-info is-light">
           Highscore List
         </RouterLink>
       </div>

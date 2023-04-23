@@ -1,10 +1,10 @@
 <template>
   <div id="gameDisplay">
     <div class="grid">
-      <Grid />
+      <Grid :selectedItem="selectedNumber" />
     </div>
     <div class="input-interface">
-      <InputInterface />
+      <InputInterface @input="selectNumber" />
     </div>
   </div>
 </template>
@@ -14,18 +14,28 @@ import Grid from "./Grid.vue";
 import InputInterface from "./InputInterface.vue";
 export default {
   components: { Grid, InputInterface },
+  data() {
+    return {
+      selectedNumber: "",
+    };
+  },
+  methods: {
+    selectNumber(event) {
+      console.log(event);
+    },
+  },
 };
 </script>
 
 <style scoped>
 #gameDisplay {
-  width: 500px;
+  width: 560px;
   margin: 5px auto;
 }
 .grid {
   margin: 5px auto;
 }
 .input-interface {
-  margin: 100px auto 40px;
+  margin: 50px auto 40px;
 }
 </style>

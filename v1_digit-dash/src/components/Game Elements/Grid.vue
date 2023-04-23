@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <Row v-for="row in rows"></Row>
+    <Row v-for="row in rows" :number="selectedItem"></Row>
   </div>
 </template>
 
@@ -8,9 +8,12 @@
 import Row from "./Row.vue";
 export default {
   components: { Row },
+  props: {
+    selectedItem: String,
+  },
   data() {
     return {
-      rows: [1, 2, 3, 4, 5, 6, 7],
+      rows: [[], [], [], [], [], [], []],
     };
   },
 };

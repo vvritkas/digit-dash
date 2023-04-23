@@ -1,6 +1,10 @@
 <template>
   <div class="row">
-    <Box v-for="number in numbers" :number="number"></Box>
+    <Box
+      v-for="digit in amountOfDigits"
+      :number="number"
+      :customClass="['digit']"
+    ></Box>
   </div>
 </template>
 
@@ -9,9 +13,10 @@ import Box from "./Box.vue";
 
 export default {
   components: { Box },
+  props: { number: String },
   data() {
     return {
-      numbers: [1, 2, 3, 4, 5, 6, 7],
+      amountOfDigits: [1, 2, 3, 4, 5, 6, 7],
     };
   },
 };
@@ -19,6 +24,6 @@ export default {
 
 <style scoped>
 .row {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 </style>
