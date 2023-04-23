@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a href="#">
+      <RouterLink to="/">
         <img class="navbar-logo" src="/Digit-Dash-Logo.png" />
-      </a>
+      </RouterLink>
 
       <a
         role="button"
@@ -20,9 +20,13 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item button is-light"> How to play </a>
+        <RouterLink to="/howToPlay" class="navbar-item button is-light">
+          How to play
+        </RouterLink>
 
-        <a class="navbar-item button is-info"> Highscore List </a>
+        <RouterLink to="/highscore" class="navbar-item button is-info">
+          Highscore List
+        </RouterLink>
       </div>
     </div>
   </nav>
@@ -36,9 +40,9 @@ export default {};
 .navbar {
   height: 50px;
   max-width: 1200px;
-  margin: 10px auto;
+  margin: 5px auto;
   position: sticky;
-  top: 0;
+  top: 0px;
 }
 
 .navbar-logo {
