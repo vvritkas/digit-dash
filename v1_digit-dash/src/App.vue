@@ -1,19 +1,9 @@
 <template>
-  <Navbar />
-  <RouterView />
-  <Footer />
+  <Navbar></Navbar>
+  <router-view></router-view>
+  <Footer></Footer>
 </template>
-
-<script>
+<script setup lang="ts">
 import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
-
-export default { components: { Navbar, Footer } };
 </script>
-
-<style scoped>
-#mainWrapper {
-  max-width: 1200px;
-  margin: 10px auto;
-}
-</style>

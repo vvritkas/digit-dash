@@ -1,55 +1,23 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <RouterLink to="/">
-        <img class="navbar-logo" src="/Digit-Dash-Logo.png" />
-      </RouterLink>
-
-      <a
-        role="button"
-        class="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
+  <div
+    class="w-full flex justify-between px-4 py-2 border-b border-slate-500 sticky top-0"
+  >
+    <img class="h-12 w-20" src="/Digit-Dash-Logo.png" />
+    <div class="self-center">
+      <button
+        v-for="button in buttons"
+        :class="button.css"
+        class="mx-2 py-1 px-2 rounded-md shadow-md border-slate-200"
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+        {{ button.name }}
+      </button>
     </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end">
-        <RouterLink to="/howToPlay" class="navbar-item button is-light">
-          How to play
-        </RouterLink>
-
-        <RouterLink to="/highscore" class="navbar-item button is-info is-light">
-          Highscore List
-        </RouterLink>
-      </div>
-    </div>
-  </nav>
+  </div>
 </template>
-
-<script>
-export default {};
+<script setup lang="ts">
+const buttons = [
+  { name: "New Game", css: "bg-green-200 hover:bg-green-400" },
+  { name: "How to Play", css: "bg-blue-200 hover:bg-blue-400" },
+  { name: "Highscore", css: "bg-red-200 hover:bg-red-400" },
+];
 </script>
-
-<style scoped>
-.navbar {
-  height: 50px;
-  max-width: 1200px;
-  margin: 5px auto;
-  position: sticky;
-  top: 0px;
-}
-
-.navbar-logo {
-  height: 50px;
-  width: auto;
-}
-.navbar-item {
-  margin: 5px;
-}
-</style>

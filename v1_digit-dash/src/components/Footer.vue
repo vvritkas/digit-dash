@@ -1,18 +1,15 @@
 <template>
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Digit Dash</strong> by
-        <a target="_blank" href="https://github.com/vvritkas"
-          >Vassilis Vritkas</a
-        >. The Website is created with ❤️.
-      </p>
+  <div class="absolute bottom-0 w-full bg-slate-50 border-t border-slate-200">
+    <div class="text-center py-8">
+      Created with ❤️ by
+      <a
+        class="text-blue-700 hover:underline"
+        href="https://github.com/vvritkas"
+        target="_blank"
+        >Vassilis Vritkas</a
+      >
     </div>
-  </footer>
+  </div>
 </template>
 
-<script>
-export default {};
-</script>
-
-<style scoped></style>
+<script setup lang="ts"></script>
